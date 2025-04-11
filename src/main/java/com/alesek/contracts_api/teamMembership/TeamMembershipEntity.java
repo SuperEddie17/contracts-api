@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.Set;
 import java.util.UUID;
 
-public class TeamMembership {
+public class TeamMembershipEntity {
 
     private UUID uuid;
 
