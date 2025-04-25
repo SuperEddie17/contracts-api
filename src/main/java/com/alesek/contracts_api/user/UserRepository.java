@@ -3,9 +3,12 @@ package com.alesek.contracts_api.user;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+import java.util.UUID;
+
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
-    // Custom query methods can be defined here if needed
-    // For example:
-    // List<UserEntity> findByUsername(String username);
+    Optional<UserEntity> findByUuid(UUID userUuid);
+    UserEntity findByEmail(String email);
+    UserEntity findByFirstNameAndLastName(String firstName, String lastName);
 }
