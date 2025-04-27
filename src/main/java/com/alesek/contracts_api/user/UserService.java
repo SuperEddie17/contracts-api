@@ -30,4 +30,11 @@ public class UserService {
         UserEntity user = userRepository.findByUuid(userUuid).orElseThrow(() -> new RuntimeException("User not found"));
         userRepository.delete(user);
     }
+
+    public UserDto getUser(UUID userUuid){
+        UserEntity user = userRepository.findByUuid(userUuid).orElseThrow(() -> new RuntimeException("User not found"));
+        return userMapper.toDto(user);
+    }
+
+
 }

@@ -6,11 +6,11 @@ import org.mapstruct.MappingTarget;
 
 @Mapper(componentModel = "spring")
 public interface UserMapper {
-    UserDto toDto(UserEntity userEntity);
+    UserDto toDto(UserEntity source);
 
-    UserEntity toEntity(UserDto userDto);
+    UserEntity toEntity(UserDto source);
 
     @Mapping(target = "id", ignore = true)
-    void updateEntity(UserDto dto, @MappingTarget UserEntity entity);
+    void updateEntity(UserDto source, @MappingTarget UserEntity target);
 
 }
