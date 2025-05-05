@@ -3,7 +3,6 @@ package com.alesek.contracts_api.team;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import lombok.Generated;
 
 import java.util.UUID;
 
